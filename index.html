@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Konversi Suhu</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+
+<!-- Favicon (Simbol Suhu) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌡️</text></svg>" />
+</head>
+<body>
+  <div class="container">
+    <h1>Konversi Suhu</h1>
+    <div class="input-section">
+      <input type="number" class="input-temp" id="inputTemp" placeholder="Masukkan suhu..." />
+      <select id="unit">
+        <option value="c">Celsius</option>
+        <option value="f">Fahrenheit</option>
+      </select>
+      <button onclick="convertTemperature()">Konversi</button>
+      <button onclick="resetAll()">Reset</button>
+    </div>
+
+    <div class="result-section">
+      <h2 id="output">Hasil konversi akan muncul di sini</h2>
+      <p id="info">Masukkan suhu dan tekan Konversi atau Enter</p>
+    </div>
+
+    <div class="thermometer-wrapper">
+      <div class="indicator-wrapper">
+        <div id="indicatorValue" class="indicator-value">0°C</div>
+        <div class="thermo-needle-line" id="indicatorLine"></div>
+      </div>
+
+      <div class="thermometer">
+        <div class="thermo-container">
+          <div class="thermo-bar" id="thermoBar"></div>
+        </div>
+      </div>
+
+      <div class="summary-box">
+        <h4>Kategori Suhu</h4>
+        <div class="category-item">
+          <span class="symbol">❄️</span> <span class="desc">&lt; 10°C :</span><span>Dingin Ekstrem</span>
+        </div>
+        <div class="category-item">
+          <span class="symbol">🌥️</span> <span class="desc">10–24°C :</span><span>Sejuk</span>
+        </div>
+        <div class="category-item">
+          <span class="symbol">🌡️</span> <span class="desc">25–34°C :</span><span>Cukup Panas</span>
+        </div>
+        <div class="category-item">
+          <span class="symbol">🔥</span> <span class="desc">≥ 35°C :</span><span>Panas Ekstrem</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 M. Khairon. All rights reserved.
+  </footer>
+
+  <script src="JS/js/script.js"></script>
+</body>
+</html>
